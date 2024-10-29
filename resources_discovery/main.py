@@ -1,11 +1,4 @@
-a = 'ele'
-b = a
-
-def rea(x) -> str:
-    return x
-
-def s() -> bool:
-    return ""
-
-
-print(a)
+from cli import MyCLI
+ 
+if __name__ == '__main__':
+    MyCLI().cmdloop()

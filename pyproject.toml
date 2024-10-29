@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "resources-discovery"
 version = "0.1.0"
-description = ""
+description = "Resources Discovery"
 authors = ["Clivaly <you@example.com>"]
 readme = "README.md"
 

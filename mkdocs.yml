@@ -1,0 +1,16 @@
+site_name: Resources Discovery
+# repo_url:
+repo_name: Clivaly/resources-discovery
+edit_uri: tree/main/docs
+
+theme: 
+  name: material
+  language: pt-BR
+  logo:
+  favicon:
+
+markdown_extensions: 
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css

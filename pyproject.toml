@@ -1,14 +1,15 @@
 [tool.poetry]
 name = "resources-discovery"
-version = "0.1.0"
+version = "0.1.1"
 description = "Resources Discovery"
 authors = ["Clivaly <you@example.com>"]
-readme = "README.md"
+readme = "README"
 
 [tool.poetry.dependencies]
 python = "^3.12"
 boto3 = "^1.35.49"
 pandas = "^2.2.3"
+halo = "^0.0.31"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
@@ -39,4 +40,5 @@ lint = "blue --check --diff . && isort --check --diff ."
 docs = "mkdocs serve"
 pre_test = "task lint"
 test = "pytest -s -x --cov=resources_discovery -vv"
-post_test = "coverage html"
+post_test = "./coverage html"
+run = "poetry run python ./resources_discovery/main.py"

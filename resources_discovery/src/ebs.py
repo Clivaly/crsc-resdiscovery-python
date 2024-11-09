@@ -3,6 +3,7 @@ import pandas as pd
 from datetime import timezone
 from src.utils.utils import check_idle_state, create_empty_df
 
+
 def get_ebs_volumes():
     ec2_client = boto3.client('ec2')
     volumes = []
@@ -22,4 +23,6 @@ def get_ebs_volumes():
     except Exception as e:
         print(f"Error retrieving EBS volumes: {e}")
         return create_empty_df(["Error"])
+        # return pd.DataFrame() # Retorna um DataFrame vazio em caso de erro
     return pd.DataFrame(volumes) if volumes else create_empty_df(["No EBS volumes found"])
+    # return pd.DataFrame(volumes) if volumes else pd.DataFrame()  # Retorna um DataFrame vazio se não houver volumes
